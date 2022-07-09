@@ -5,7 +5,9 @@ interface FeedbackTypeStepProps {
   onFeedbackTypeChanged: (type: FeedbackType) => void;
 }
 
-export function FeedbackTypeStep({ onFeedbackTypeChanged }: FeedbackTypeStepProps) {
+export function FeedbackTypeStep({
+  onFeedbackTypeChanged,
+}: FeedbackTypeStepProps) {
   return (
     <>
       <header>
@@ -14,7 +16,7 @@ export function FeedbackTypeStep({ onFeedbackTypeChanged }: FeedbackTypeStepProp
       </header>
 
       <div className="flex py-8 gap-2 w-full">
-        { Object.entries(feedbackTypes).map(([key, value]) => {
+        {Object.entries(feedbackTypes).map(([key, value]) => {
           return (
             <button
               key={key}
@@ -23,11 +25,11 @@ export function FeedbackTypeStep({ onFeedbackTypeChanged }: FeedbackTypeStepProp
               type="button"
             >
               <img src={value.image.source} alt={value.image.alt} />
-              <span>{value.title}</span>
+              <span className="text-sm">{value.title}</span>
             </button>
           );
         })}
       </div>
     </>
-  )
+  );
 }

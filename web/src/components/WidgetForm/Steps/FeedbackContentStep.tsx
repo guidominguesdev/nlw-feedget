@@ -1,7 +1,7 @@
 import { CloseButton } from "../../CloseButton";
 import { FeedbackType, feedbackTypes } from "..";
 import { ArrowLeft } from "phosphor-react";
-import { ScreenshotButton } from "../ScreenshotButton";
+import { ScreenshotButton } from "../../ScreenshotButton";
 import { FormEvent, useState } from "react";
 import { api } from "../../../lib/api";
 import { Loading } from "../../Loading";
@@ -66,10 +66,10 @@ export function FeedbackContentStep({
 
       <form onSubmit={handleSubmitFeedback} className="my-4 w-full">
         <textarea
-          className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent 
+          className="md:w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent 
           rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none 
         scrollbar-thumb-zinc-700 scroll-bar-track-transparent scrollbar-thin"
-          placeholder="Conte com detalhes o que está acontecendo..."
+          placeholder="Algo não está funcionando bem? Queremos corrigir. Conte com detalhes o que está acontecendo..."
           onChange={(event) => setComment(event.target.value)}
         />
 
